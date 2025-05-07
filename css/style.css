@@ -1,0 +1,16 @@
+.avatar_principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 0;
+  }
+  
+  .avatar_principal img {
+    width: 30vw;          
+    max-width: 300px;     
+    height: auto;         
+    border-radius: 50%;
+    border: 6px solid #ccc;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
