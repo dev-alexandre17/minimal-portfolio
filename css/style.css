@@ -7,6 +7,49 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.logo-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.menu_navegacao {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu_navegacao li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.menu_navegacao li a:hover {
+  background-color: #f0f0f0;
+}
+
+.titulo_principal {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.descricao_principal {
+  text-align: center;
+  margin-top: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
 .avatar_principal {
     display: flex;
     justify-content: center;
