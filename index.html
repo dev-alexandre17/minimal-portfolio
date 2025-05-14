@@ -1,40 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alexandre Tech</title>
-    <link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minimalismo</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
 
-    <header>
-        <div class="logo">
-            <img src="" class="logo-icon">
-        </div>
-        <nav>
-            <ul class="menu_navegacao">
-                <li><a href="index.html">Página Inicial</a></li>
-                <li><a href="/pages/about.html">Sobre Mim</a></li>
-                <li><a href="/pages/projects.html">Projetos</a></li>
-                <li><a href="/pages/contacts.html">Contatos</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header id="main-header">
+    <div class="header-content">
+ 
+      <ul class="menu_navegacao">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="/pages/about.html">Sobre Mim</a></li>
+      </ul>
 
-    <div class="titulo_principal">
-        <h1>Alexandre Gonçalo</h1>
+      <div class="logo">Minimalismo</div>
+
+      <ul class="menu_navegacao">
+        <li><a href="/pages/projects.html">Projetos</a></li>
+        <li><a href="/pages/contacts.html">Contatos</a></li>
+      </ul>
+      
     </div>
+  </header>
 
-    <section class="descricao_principal">
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Iure asperiores alias nesciunt ad excepturi nihil sed quae illum id, 
-            placeat odio officiis. Molestias qui nisi esse, 
-            aliquam excepturi exercitationem culpa.
-        </p>
-    </section>
+  <div id="hero">
+    <canvas id="particles"></canvas>
 
+    <main>
+      <div class="titulo_principal">
+        <h1>Descubra Meu Mundo Criativo</h1>
+      </div>
+
+      <section class="descricao_principal">
+        <p id="typed-text"></p>
+      </section>
+    </main>
+  </div>
+
+  <script src="/js/script.js"></script>
 </body>
+
 </html>

@@ -1,15 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: transparent;
+  height: 100vh;
+  position: relative;
+}
+
 header {
+  background: transparent;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  padding: 20px;
+}
+
+.header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.logo-icon {
-  width: 50px;
-  height: 50px;
+  width: 100%;
+  position: relative;
 }
 
 .menu_navegacao {
@@ -23,30 +43,79 @@ header {
   color: #333;
   font-weight: 500;
   padding: 8px 16px;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
+  border-radius: 24px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
 }
 
-.menu_navegacao li a:hover {
-  background-color: #f0f0f0;
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+  background-size: 600% 600%;
+  animation: gradientBackground 15s ease infinite;
+  z-index: 0;
+}
+
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+canvas#particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.titulo_principal,
+.descricao_principal {
+  position: relative;
+  z-index: 1;
 }
 
 .titulo_principal {
-  text-align: center;
-  margin-top: 50px;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: bold;
-  color: #333;
+  margin-bottom: 20px;
 }
 
 .descricao_principal {
-  text-align: center;
-  margin-top: 20px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 1.1rem;
-  color: #666;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  color: black;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.7;
 }
-  
+
+section {
+  padding: 80px 20px;
+}
