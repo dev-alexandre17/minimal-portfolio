@@ -1,20 +1,23 @@
-gsap.from(".main-header", {
-    y: -60,
-    opacity: 0,
-    duration: 1,
-    ease: "power2.out"
-});
-
-gsap.from(".main-header .menu_navegacao li", {
-    opacity: 0,
-    y: -20,
-    duration: 0.6,
-    ease: "power2.out",
-    stagger: 0.15,
-    delay: 0.5
-});
-
 window.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector("#main-header");
+    if (header) {
+        gsap.from("#main-header", {
+            y: -60,
+            opacity: 0,
+            duration: 1,
+            ease: "power2.out"
+        });
+
+        gsap.from("#main-header .menu_navegacao li", {
+            opacity: 0,
+            y: -20,
+            duration: 0.6,
+            ease: "power2.out",
+            stagger: 0.15,
+            delay: 0.5
+        });
+    }
+    
     gsap.registerPlugin(InertiaPlugin);
 
     let oldX = 0, oldY = 0, deltaX = 0, deltaY = 0;
