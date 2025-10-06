@@ -42,7 +42,7 @@ window.addEventListener('resize', () => {
   canvas.height = document.getElementById("hero").offsetHeight;
 });
 
-const colors = ['#ff9a9e', '#fad0c4', '#a18cd1', '#fbc2eb'];
+const colors = ["#DDEFE2", "#B7C4B2", "#6B8F71", "#1F2E2B"];
 
 class Particle {
   constructor() {

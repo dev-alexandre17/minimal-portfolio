@@ -12,6 +12,9 @@ body {
     height: 100vh;
     position: relative;
     color: #222;
+    background: url('/assets/images/backgrounds/minimalist\ full-page.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 header {

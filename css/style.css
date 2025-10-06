@@ -11,6 +11,9 @@ body {
   background-color: transparent;
   height: 100vh;
   position: relative;
+  background: url('/assets/images/backgrounds/minimalist\ full-page.png') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 header {
@@ -66,7 +69,6 @@ header {
   align-items: center;
   text-align: center;
   padding: 0 20px;
-  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
   background-size: 600% 600%;
   animation: gradientBackground 15s ease infinite;
   z-index: 0;
