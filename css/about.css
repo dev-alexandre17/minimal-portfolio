@@ -24,7 +24,7 @@ body {
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: --font-primary;
   line-height: 1.6;
   overflow-x: hidden;
   background-color: transparent;
@@ -78,6 +78,16 @@ header {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  padding: 20px 0;
 }
 
 .slide {
