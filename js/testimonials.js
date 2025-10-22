@@ -43,3 +43,20 @@ document.addEventListener("keydown", (e) => {
         gotoSection(currentIndex + 1);
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('menu-toggle');
+  const panel = document.getElementById('side-panel');
+  const themeBtn = document.getElementById('toggle-theme');
+  const langBtn = document.getElementById('toggle-lang');
+
+  toggle.addEventListener('click', () => {
+    panel.style.display = panel.style.display === 'flex' ? 'none' : 'flex';
+  });
+
+  themeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+    themeBtn.textContent = isDark ? '🌞 Modo Claro' : '🌗 Modo Escuro';
+  });
+});
