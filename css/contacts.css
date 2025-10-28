@@ -329,3 +329,7 @@ body.dark-mode input::placeholder,
 body.dark-mode textarea::placeholder {
     color: #aaa;
 }
+
+body.dark-mode #zen-mode {
+    color: #eee;
+}

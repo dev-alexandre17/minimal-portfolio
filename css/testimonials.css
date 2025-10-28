@@ -232,24 +232,24 @@ body.dark-mode #toggle-theme {
 }
 
 body.dark-mode {
-  background: #121212;
-  color: #eee;
+    background: #121212;
+    color: #eee;
 }
 
 body.dark-mode a {
-  color: #eee;
+    color: #eee;
 }
 
 body.dark-mode .logo {
-  color: #eee;
+    color: #eee;
 }
 
 body.dark-mode .logo:hover {
-  color: #319795;
+    color: #319795;
 }
 
 body.dark-mode footer {
-  color: #eee;
+    color: #eee;
 }
 
 body.dark-mode .testimonials h2 {
@@ -269,5 +269,9 @@ body.dark-mode .testimonials .name {
 }
 
 body.dark-mode .testimonials .role {
+    color: #eee;
+}
+
+body.dark-mode #zen-mode {
     color: #eee;
 }

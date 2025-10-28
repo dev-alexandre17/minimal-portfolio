@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modo Zen</title>
+    <link rel="icon" href="/assets/images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/pomodoro-notes.css" />
+    <link rel="stylesheet" href="/css/ambient-sound.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+    <div class="pomodoro-container">
+        <div id="timer">25:00</div>
+    </div>
+
+    <div class="barra-container">
+        <div id="barra-progresso"></div>
+    </div>
+
+    <div class="controles">
+        <button onclick="startTimer()">▶️ Play</button>
+        <button onclick="togglePause()">⏸️ Pause</button>
+        <button onclick="stopTimer()">⏹️ Stop</button>
+    </div>
+
+    <button id="criar">➕ Criar bloco de notas</button>
+
+    <audio id="alarme" src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg" preload="auto"></audio>
+
+    <audio id="lofi-audio" loop>
+        <source src="/assets/sounds/lofi.mp3" type="audio/mpeg" />
+    </audio>
+
+    <div class="avatar-bubble-container">
+        <img src="/assets/images/testimonials/notion-avatar-1757274624328.png" alt="Avatar" class="avatar-img" />
+        <div class="speech-bubble" id="speech">
+            <p>Modo Zen ativado 🍃. <br>
+            Som ambiente disponível. Deseja ativar? </p>
+            <div class="options">
+                <button onclick="playSound()">✅ Sim, quero ouvir</button>
+                <button class="no-btn" onclick="declineSound()">❌ Não, obrigado</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Alexandre. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="/js/pomodoro-notes.js"></script>
+    <script src="/js/ambient-sound.js"></script>
+
+</body>
+
+</html>
