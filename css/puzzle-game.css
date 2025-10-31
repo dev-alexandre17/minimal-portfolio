@@ -1,0 +1,53 @@
+  h1 {
+      display: flex;
+      justify-content: center;
+      color: #2d9c58;
+      margin-bottom: 1rem;
+      padding-top: 150px;
+  }
+
+  .controls {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+  }
+
+  select,
+  button {
+      display: flex;
+      justify-content: center;
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: #0bb372;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+  }
+
+  #info {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      color: #333;
+  }
+
+  #puzzle-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+  }
+
+  #puzzle {
+      display: grid;
+      gap: 2px;
+      border: 2px solid #333;
+  }
+
+  .piece {
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=300&q=80');
+      background-size: cover;
+      cursor: grab;
+      border: 1px solid #444;
+  }

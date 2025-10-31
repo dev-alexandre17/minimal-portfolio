@@ -227,3 +227,7 @@ body.dark-mode #toggle-theme {
 body.dark-mode #zen-mode {
   color: #eee;
 }
+
+body.dark-mode #game-mode {
+  color: #eee;
+}

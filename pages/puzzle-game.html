@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🧩 Puzzle Game</title>
+    <link rel="icon" href="/assets/images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/puzzle-game.css" />
+    <link rel="stylesheet" href="/css/ambient-sound.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+    <h1>🧩 Nature Puzzle</h1>
+
+    <div class="controls">
+        <label for="nivel"></label>
+        <select id="nivel">
+            <option value="3">Fácil (3x3)</option>
+            <option value="4">Médio (4x4)</option>
+            <option value="5">Difícil (5x5)</option>
+        </select>
+        <button onclick="comecarJogo()">Começar</button>
+        <button onclick="embaralhar()" disabled id="embaralharBtn">Embaralhar</button>
+
+    </div>
+
+    <div id="info">
+        ⏱️ Tempo: <span id="timer">0</span>s | 🎯 Movimentos: <span id="movimentos">0</span>
+    </div>
+
+    <div id="puzzle-wrapper">
+        <div id="puzzle"></div>
+    </div>
+
+    <audio id="lofi-audio" loop>
+        <source src="/assets/sounds/lofi.mp3" type="audio/mpeg" />
+    </audio>
+
+    <div class="avatar-bubble-container">
+        <img src="/assets/images/testimonials/notion-avatar-1757274624328.png" alt="Avatar" class="avatar-img" />
+        <div class="speech-bubble" id="speech">
+            <p> Som ambiente disponível. Deseja ativar? </p>
+            <div class="options">
+                <button onclick="playSound()">✅ Sim, quero ouvir</button>
+                <button class="no-btn" onclick="declineSound()">❌ Não, obrigado</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Alexandre. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="/js/puzzle-game.js"></script>
+    <script src="/js/ambient-sound.js"></script>
+
+</body>
+
+</html>
