@@ -52,50 +52,56 @@ window.addEventListener("DOMContentLoaded", () => {
             ease: "power2.out"
         });
 
-
         const form = document.querySelector(".contact-form");
         const feedback = document.getElementById("formFeedback");
 
         form.addEventListener("submit", function (e) {
             e.preventDefault();
 
-            if (feedback) {
-                feedback.style.display = "block";
+            const formData = new FormData(form);
 
-                gsap.to(feedback, {
-                    opacity: 1,
-                    y: -10,
-                    duration: 0.6,
-                    ease: "power2.out"
-                });
+            fetch(form.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    Accept: "application/json"
+                }
+            }).then(response => {
+                if (response.ok) {
+                    form.reset();
 
-                setTimeout(() => {
-                    gsap.to(feedback, {
-                        opacity: 0,
-                        duration: 0.5,
-                        onComplete: () => {
+                    if (feedback) {
+                        feedback.style.display = "block";
+                        feedback.textContent = "Mensagem enviada com sucesso!";
+
+                        setTimeout(() => {
                             feedback.style.display = "none";
-                        }
-                    });
-                }, 5000);
-            }
+                        }, 5000);
+                    }
+                } else {
+                    alert("Erro ao enviar. Tente novamente.");
+                }
+            }).catch(error => {
+                alert("Erro de rede. Verifique sua conexão.");
+                console.error(error);
+            });
         });
     }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.getElementById('menu-toggle');
-    const panel = document.getElementById('side-panel');
-    const themeBtn = document.getElementById('toggle-theme');
-    const langBtn = document.getElementById('toggle-lang');
+    document.addEventListener('DOMContentLoaded', () => {
+        const toggle = document.getElementById('menu-toggle');
+        const panel = document.getElementById('side-panel');
+        const themeBtn = document.getElementById('toggle-theme');
+        const langBtn = document.getElementById('toggle-lang');
 
-    toggle.addEventListener('click', () => {
-        panel.style.display = panel.style.display === 'flex' ? 'none' : 'flex';
-    });
+        toggle.addEventListener('click', () => {
+            panel.style.display = panel.style.display === 'flex' ? 'none' : 'flex';
+        });
 
-    themeBtn.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        const isDark = document.body.classList.contains('dark-mode');
-        themeBtn.textContent = isDark ? '🌞 Modo Claro' : '🌗 Modo Escuro';
+        themeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            themeBtn.textContent = isDark ? '🌞 Modo Claro' : '🌗 Modo Escuro';
+        });
     });
-});

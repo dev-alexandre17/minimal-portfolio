@@ -55,9 +55,9 @@
             redes.
         </p>
 
-        <form class="contact-form" action="#" method="POST">
+        <form class="contact-form" action="https://formspree.io/f/xqaggjwg" method="POST">
             <input type="text" name="name" placeholder="Como posso te chamar?" required>
-            <input type="email" name="email" placeholder="Seu melhor e-mail" required>
+            <input type="email" name="email" placeholder="Digite seu melhor e-mail" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}">
 
             <select name="type" required>
                 <option value="">Tipo de contato</option>
@@ -70,10 +70,6 @@
             <textarea name="message" placeholder="Escreva sua mensagem aqui..." required></textarea>
             <button type="submit">Enviar mensagem</button>
         </form>
-
-        <div class="form-feedback" id="formFeedback">
-            ✅ Mensagem enviada com sucesso! Obrigado pelo contato.
-        </div>
 
         <div class="contact-links">
             <a href="https://www.linkedin.com/in/alexandre-goncalo-da-silva-filho" target="_blank"><i
