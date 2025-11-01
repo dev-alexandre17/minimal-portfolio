@@ -61,16 +61,18 @@ header {
 
 .logo:hover {
   background-color: transparent;
-  color: #319795; 
+  color: #319795;
 }
 
 .menu_navegacao {
   list-style: none;
   display: flex;
-  gap: 5px;
-  margin: 0;
-  padding: 0;
-  margin-left: 1200px;
+  position: absolute;
+  right: 60px;
+  top: 0;
+  justify-content: flex-end;
+  gap: 24px;
+  padding-top: 5px;
 }
 
 .menu_navegacao li a {
@@ -81,6 +83,7 @@ header {
   border-radius: 24px;
   transition: all 0.3s ease;
   border: 1px solid transparent;
+  text-underline-offset: 4px;
 }
 
 .menu_navegacao li a:hover {
@@ -246,4 +249,3 @@ body.dark-mode #zen-mode {
 body.dark-mode #game-mode {
   color: #eee;
 }
-

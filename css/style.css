@@ -45,16 +45,18 @@ header {
 
 .logo:hover {
   background-color: transparent;
-  color: #319795; 
+  color: #319795;
 }
 
 .menu_navegacao {
   list-style: none;
   display: flex;
-  gap: 5px;
-  margin: 0;
-  padding: 0;
-  margin-left: 1200px;
+  position: absolute;
+  right: 60px;
+  top: 0;
+  justify-content: flex-end;
+  gap: 24px;
+  padding-top: 5px;
 }
 
 .menu_navegacao li a {
@@ -96,20 +98,6 @@ footer {
   background-size: 600% 600%;
   animation: gradientBackground 15s ease infinite;
   z-index: 0;
-}
-
-@keyframes gradientBackground {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 canvas#particles {

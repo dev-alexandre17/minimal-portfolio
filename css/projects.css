@@ -52,10 +52,12 @@ header {
 .menu_navegacao {
     list-style: none;
     display: flex;
-    gap: 5px;
-    margin: 0;
-    padding: 0;
-    margin-left: 1200px;
+    position: absolute;
+    right: 60px;
+    top: 0;
+    justify-content: flex-end;
+    gap: 24px;
+    padding-top: 5px;
 }
 
 .menu_navegacao li a {
@@ -126,29 +128,6 @@ footer {
     display: block;
     pointer-events: none;
     will-change: transform;
-}
-
-@media (max-width: 768px) {
-    .header {
-        padding: 15px;
-        display: flex;
-        justify-content: space-between;
-        font-size: 12px;
-    }
-
-    .header div:nth-child(2) {
-        display: none;
-    }
-
-    .medias {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2vw;
-    }
-
-    .media img {
-        width: 18vw;
-        height: 18vw;
-    }
 }
 
 body.dark-mode {
@@ -226,9 +205,9 @@ body.dark-mode #toggle-theme {
 }
 
 body.dark-mode #zen-mode {
-  color: #eee;
+    color: #eee;
 }
 
 body.dark-mode #game-mode {
-  color: #eee;
+    color: #eee;
 }

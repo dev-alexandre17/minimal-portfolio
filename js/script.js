@@ -1,17 +1,32 @@
-gsap.from("#main-header", {
-  y: -60,
-  opacity: 0,
-  duration: 1,
-  ease: "power2.out"
-});
+window.addEventListener("DOMContentLoaded", () => {
+  gsap.from(".header-content", {
+    y: -60,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+  });
 
-gsap.from("#main-header .menu_navegacao li", {
-  opacity: 0,
-  y: -20,
-  duration: 0.6,
-  ease: "power2.out",
-  stagger: 0.15,
-  delay: 0.5
+  gsap.from(".menu_navegacao li", {
+    opacity: 0,
+    y: -20,
+    duration: 0.6,
+    ease: "power2.out",
+    stagger: 0.15,
+    delay: 0.5
+  });
+
+  gsap.registerPlugin(SplitText);
+
+  const split = SplitText.create(".titulo_principal", { type: "lines" });
+
+  gsap.from(split.lines, {
+    rotationX: -100,
+    transformOrigin: "50% 50% -160px",
+    opacity: 0,
+    duration: 0.8,
+    ease: "power3.out",
+    stagger: 0.25
+  });
 });
 
 const textToType = `Olá, eu sou Alexandre Gonçalo, um desenvolvedor backend apaixonado por criar experiências digitais únicas e funcionais.
