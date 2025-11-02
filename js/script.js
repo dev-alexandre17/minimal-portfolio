@@ -15,17 +15,13 @@ window.addEventListener("DOMContentLoaded", () => {
     delay: 0.5
   });
 
-  gsap.registerPlugin(SplitText);
+  const titulo = document.querySelector(".titulo_principal");
 
-  const split = SplitText.create(".titulo_principal", { type: "lines" });
-
-  gsap.from(split.lines, {
-    rotationX: -100,
-    transformOrigin: "50% 50% -160px",
+  gsap.from(titulo, {
     opacity: 0,
-    duration: 0.8,
-    ease: "power3.out",
-    stagger: 0.25
+    y: 50, 
+    duration: 1,
+    ease: "power3.out"
   });
 });
 
